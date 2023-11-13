@@ -12,9 +12,11 @@ I've deployed the project at https://mern-auth-q1qf.onrender.com/
 The front-end of the application is developed using React, a popular JavaScript library for building user interfaces. React Router is employed for client-side routing, enabling seamless navigation within the application.
 
 *Back-End*
+
 Node.js and Express form the back-end, with MongoDB serving as the database for user information and authentication data. Cookies are used for efficient and secure session management.
 
 *Authentication*
+
 Authentication is implemented through JSON Web Tokens (JWT), providing secure authorization for protected routes. User authentication state is managed and persisted using Redux.
 
 ## Getting Started
