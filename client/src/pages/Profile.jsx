@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { useRef, useState, useEffect } from 'react'
-import {getDownloadURL, getStorage, uploadBytesResumable} from 'firebase/storage'
+import {getDownloadURL, getStorage, uploadBytesResumable, ref} from 'firebase/storage'
 import { app } from '../firebase'
 
 const Profile = () => {
@@ -59,7 +59,7 @@ const Profile = () => {
               ''
             )}
           </p>
-          <img src={currentUser.profilePicture} alt="profile" className='h-24 w-24 self-center cursor-pointer rounded-full object-cover mt-2' onClick={()=>fileRef.current.click()}/>
+          <img src={formData.profilePicture || currentUser.profilePicture} alt="profile" className='h-24 w-24 self-center cursor-pointer rounded-full object-cover mt-2' onClick={()=>fileRef.current.click()}/>
           <input type="text" defaultValue={currentUser.username} id='username' placeholder='Username' className='bg-slate-100 rounded-lg p-3' />
           <input type="email" defaultValue={currentUser.email} id='email' placeholder='Email' className='bg-slate-100 rounded-lg p-3' />
           <input type="password" id='password' placeholder='Password' className='bg-slate-100 rounded-lg p-3' />
